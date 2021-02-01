@@ -84,6 +84,8 @@ class UI {
   }
 
   showAlert(msg, classNames) {
+    //clear the profile first
+    this.clearProfile();
     const alert = document.createElement('div');
     alert.className = `${classNames} mt-2 text-center`;
     alert.textContent = msg;
