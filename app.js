@@ -14,13 +14,14 @@ searchUser.addEventListener('keyup', async(evt) => {
   // Make sure the username is not empty
   if (username !== ''){
     // Make an HTTP GET request
-    const {profile } = await github.getUser(username);
-    if (profile.message === 'Not Found') {
+    const {profile, repos, message } = await github.getUser(username);
+    if (message === 'Not Found') {
       //Show an alert
       ui.showAlert('User not found!', 'alert alert-danger');
     } else {
-      //Show profile
+      //Show profile and repos
       ui.showProfile(profile);
+      ui.showRepos(repos);
     }
   } else {
     //Clear the profile area
