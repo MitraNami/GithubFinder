@@ -56,11 +56,17 @@ class UI {
       <div id="reops"></div>
     
     `;
-    
-  
-  
-     
+
     this.profile.innerHTML = profile;
+  }
+
+  showAlert(msg, classNames) {
+    const alert = document.createElement('div');
+    alert.className = `${classNames} mt-2 text-center`;
+    alert.textContent = msg;
+    //Insert the alert above the profile section
+    document.querySelector('.search')
+      .insertAdjacentElement('afterend', alert);
+  }
   
-  };
 }
