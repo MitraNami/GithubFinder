@@ -15,6 +15,7 @@ searchUser.addEventListener('keyup', async(evt) => {
     const {profile } = await github.getUser(username);
     if (profile.message === 'Not Found') {
       //Show an alert
+      ui.showAlert('User not found!', 'alert alert-danger');
     } else {
       //Show profile
       ui.showProfile(profile);
