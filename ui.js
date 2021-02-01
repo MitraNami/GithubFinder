@@ -74,5 +74,9 @@ class UI {
     //if there is an alert clear it
     alert && alert.remove();
   }
+
+  clearProfile() {
+    this.profile.innerHTML = '';
+  }
   
 }
