@@ -7,6 +7,8 @@ const ui = new UI();
 const searchUser = document.querySelector('#searchUser');
 
 searchUser.addEventListener('keyup', async(evt) => {
+  // Clear alert message
+  ui.clearAlert();
   //Get input text
   const username = evt.target.value;
   // Make sure the username is not empty
