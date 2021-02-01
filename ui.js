@@ -68,5 +68,11 @@ class UI {
     document.querySelector('.search')
       .insertAdjacentElement('afterend', alert);
   }
+
+  clearAlert() {
+    const alert = document.querySelector('.alert');
+    //if there is an alert clear it
+    alert && alert.remove();
+  }
   
 }
